@@ -1,0 +1,1 @@
+.sidebar {height: calc(100vh - var(--navbar-height));  width: var(--sidebar-width);  background: var(--inverted-bg);  position: relative;  transition: .3s;}.collapsed {  width: var(--sidebar-width-collapsed);}.switcher {  position: absolute;  bottom: 20px;  left: 20px;  display: grid;  place-items: center;}
