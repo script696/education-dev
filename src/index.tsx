@@ -1,7 +1,13 @@
-import { someFn } from "./test";
 import { render } from "react-dom";
-import { Counter } from "./components/Counter";
 import { App } from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { Suspense } from "react";
 
-someFn(123);
-render(<App />, document.getElementById("root"));
+render(
+  <Suspense fallback={<div>loading...</div>}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Suspense>,
+  document.getElementById("root")
+);
