@@ -14,11 +14,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/utimur/production_project_code_source/issues"
-  },
-  "homepage": "https://github.com/utimur/production_project_code_source#readme",
   "devDependencies": {
     "@types/node": "^17.0.21",
     "@types/react": "^18.2.8",

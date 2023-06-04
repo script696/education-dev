@@ -4,6 +4,12 @@ export interface BuildPaths {
   entry: string;
   build: string;
   html: string;
+  src : string;
+  app : string;
+  widgets : string;
+  entities : string;
+  pages: string;
+  shared  :string;
 }
 
 export interface BuildOptions {
