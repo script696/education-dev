@@ -1,9 +1,8 @@
 import "./styles/index.scss";
-import { Link, Route, Routes } from "react-router-dom";
-import {getClassNames} from "@shared/helpers/getClassNames/getClassNames";
-import {useTheme} from "@app/proveders/ThemeProvider";
-import {AboutPage} from "@pages/ui/AboutPage";
-import {MainPage} from "@pages/ui/MainPage";
+import { Link } from "react-router-dom";
+import { getClassNames } from "@shared/helpers/getClassNames/getClassNames";
+import { useTheme } from "@app/proveders/ThemeProvider";
+import { AppRouter } from "@app/proveders/AppRouter";
 
 export const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -13,10 +12,7 @@ export const App = () => {
       <button onClick={toggleTheme}>TOGGLE</button>
       <Link to={"/"}>Main</Link>
       <Link to={"/about"}>About</Link>
-      <Routes>
-        <Route path={"/"} element={<MainPage />} />
-        <Route path={"/about"} element={<AboutPage />} />
-      </Routes>
+      <AppRouter />
     </div>
   );
 };
