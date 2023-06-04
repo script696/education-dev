@@ -1,5 +1,5 @@
-import "./style.scss";
+import s from "./Counter.module.scss";
 
 export const Counter = () => {
-  return <div className={"counter"}>Counter</div>;
+  return <div className={s["counter"]}>Counter!!!</div>;
 };

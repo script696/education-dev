@@ -19,7 +19,7 @@ export function buildWebpackConfig(
     },
     plugins: buildPlugins(paths),
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
     devServer: isDevMod ? buildDevServer(options) : undefined,
