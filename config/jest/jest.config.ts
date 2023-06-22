@@ -18,9 +18,23 @@ export default {
   testEnvironment: "jsdom",
   coveragePathIgnorePatterns: ["\\\\node_modules\\\\"],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"],
-  moduleDirectories: ["node_modules"],
+  moduleDirectories: ["node_modules", "src"],
+  moduleNameMapper: {
+    "@app/(.*)": "<rootDir>/src/app/$1",
+    "@widgets/(.*)": "<rootDir>/src/widgets/$1",
+    "@entities/(.*)": "<rootDir>/src/entities/$1",
+    "@pages/(.*)": "<rootDir>/src/pages/$1",
+    "@shared/(.*)": "<rootDir>/src/shared/$1",
+    "\\.(scss)$": "identity-obj-proxy",
+  },
+  transform: {
+    "\\.ts|tsx": "babel-jest",
+    "\\.svg$": "<rootDir>/config/jest/fileTransformer.js",
+  },
   testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
   rootDir: "../../",
+  setupFilesAfterEnv: ["<rootDir>/config/jest/setup-tests.ts"],
+
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
 

@@ -1,4 +1,4 @@
-import { getClassNames } from "./getClassNames";
+import { getClassNames } from "@shared/helpers";
 
 describe("classnames", () => {
   test("with only one param", () => {
