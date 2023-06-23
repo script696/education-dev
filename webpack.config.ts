@@ -3,7 +3,7 @@ import { buildWebpackConfig } from "./config/build/buildWebpackConfig";
 import { BuildEnv, BuildPaths, BuildType } from "./config/build/types/config";
 import path from "path";
 
-const PATHS: BuildPaths = {
+export const PATHS: BuildPaths = {
   src: path.resolve(__dirname, "src"),
   entry: path.resolve(__dirname, "src", "index.tsx"),
   build: path.resolve(__dirname, "build"),
@@ -11,7 +11,7 @@ const PATHS: BuildPaths = {
   app: path.resolve(__dirname, "src/app"),
   widgets: path.resolve(__dirname, "src", "widgets"),
   entities: path.resolve(__dirname, "src", "entities"),
-  pages: path.resolve(__dirname, "src/pages",),
+  pages: path.resolve(__dirname, "src/pages"),
   shared: path.resolve(__dirname, "src/shared"),
 };
 

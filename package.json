@@ -9,7 +9,9 @@
     "build:prod": "webpack --env mode=production",
     "js:check": "eslint src --max-warnings=0",
     "js:fix": "eslint src --fix --max-warnings=0",
-    "test": "jest --config ./config/jest/jest.config.ts"
+    "test": "jest --config ./config/jest/jest.config.ts",
+    "storybook": "storybook dev -p 6006 -c ./config/storybook",
+    "build-storybook": "storybook build -c ./config/storybook"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,13 @@
   "devDependencies": {
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
+    "@storybook/addon-essentials": "^7.0.23",
+    "@storybook/addon-interactions": "^7.0.23",
+    "@storybook/addon-links": "^7.0.23",
+    "@storybook/blocks": "^7.0.23",
+    "@storybook/react": "^7.0.23",
+    "@storybook/react-webpack5": "^7.0.23",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@svgr/webpack": "^8.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -40,6 +49,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.5.0",
+    "eslint-plugin-storybook": "^0.6.12",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
@@ -48,6 +58,7 @@
     "mini-css-extract-plugin": "^2.7.6",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.1",
+    "storybook": "^7.0.23",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
