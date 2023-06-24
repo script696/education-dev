@@ -11,7 +11,7 @@ export const App = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={getClassNames("app", {}, [theme])}>
+    <body className={getClassNames("app", {}, [theme])}>
       <Suspense fallback={<PageLoader />}>
         <NavBar />
         <div className={"content-page"}>
@@ -21,6 +21,6 @@ export const App = () => {
           </div>
         </div>
       </Suspense>
-    </div>
+    </body>
   );
 };

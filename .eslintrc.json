@@ -6,15 +6,21 @@
     "amd": true,
     "node": true
   },
-  "ignorePatterns": [".eslintrc.json", "jest.setup.js"],
+  "ignorePatterns": [
+    ".eslintrc.json",
+    "jest.setup.js"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
-  "plugins": ["@typescript-eslint"],
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "rules": {
     "no-console": [
       "error",
