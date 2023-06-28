@@ -8,7 +8,7 @@ export function buildPlugins({
   paths,
   isDevMod,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
+  const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html,
     }),
@@ -20,6 +20,11 @@ export function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDevMod),
     }),
-    new BundleAnalyzerPlugin({ openAnalyzer: false }),
   ];
+
+  if (isDevMod) {
+    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+  }
+
+  return plugins;
 }
